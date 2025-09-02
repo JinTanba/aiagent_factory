@@ -1,0 +1,210 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.sublime-*
+.atom/
+.brackets.json
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn-integrity
+.pnp
+.pnp.js
+lerna-debug.log*
+.nyc_output
+coverage/
+*.tsbuildinfo
+.eslintcache
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+target/
+.gradle/
+gradle-app.setting
+!gradle-wrapper.jar
+.gradletasknamecache
+
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+go.work
+vendor/
+
+# Rust
+target/
+Cargo.lock
+**/*.rs.bk
+
+# .NET
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.userprefs
+packages/
+*.nupkg
+*.snupkg
+
+# Build outputs
+dist/
+build/
+out/
+*.o
+*.a
+*.lib
+*.dll
+*.exe
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Cache directories
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+.vuepress/dist
+
+# Temporary files
+tmp/
+temp/
+.tmp/
+*.tmp
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Docker
+.dockerignore
+Dockerfile.dev
+docker-compose.override.yml
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# Kubernetes
+*.kubeconfig
+
+# Cloud functions
+.vercel/
+.netlify/
+
+# Mobile development
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/
+.gradle/
+local.properties
+*.iml
+.externalNativeBuild/
+.cxx/
+
+# Package managers
+yarn.lock
+package-lock.json
+pnpm-lock.yaml
+Pipfile.lock
+poetry.lock
+composer.lock
+
+# Documentation build
+docs/_build/
+site/
+
+# Backup files
+*.bak
+*.backup
+*~
