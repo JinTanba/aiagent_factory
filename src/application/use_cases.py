@@ -17,8 +17,6 @@ from .dtos import (
     HealthResponse
 )
 
-
-
 class CreateAgentUseCase:
     """Use case for creating a new agent."""
     

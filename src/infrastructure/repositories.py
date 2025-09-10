@@ -10,7 +10,6 @@ from ..domain.entities import AgentSession, MCPServerConfig
 from ..domain.repositories import SessionRepository, AgentRepository
 from ..domain.value_objects import SessionId
 
-
 class InMemorySessionRepository(SessionRepository):
     """In-memory implementation of session repository."""
     
