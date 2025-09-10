@@ -22,6 +22,10 @@ class AppConfig(BaseModel):
     openai_api_key: Optional[str] = None
     openai_model: str = "gpt-4o"
     
+    # MongoDB Configuration
+    mongodb_url: Optional[str] = None
+    mongodb_database: str = "blackswan_agents"
+    
     # System Prompt
     system_prompt: str = """
 You are a helpful assistant that can use the following tools to help the user.
@@ -36,6 +40,10 @@ ALL RESPONSE SHOULD BE JAPANESE.
         self.host = os.getenv("HOST", self.host)
         self.port = int(os.getenv("PORT", self.port))
         self.debug = os.getenv("DEBUG", "false").lower() == "true"
+        
+        # MongoDB configuration
+        self.mongodb_url = os.getenv("MONGODB_URL", self.mongodb_url)
+        self.mongodb_database = os.getenv("MONGODB_DATABASE", self.mongodb_database)
 
 
 # Global configuration instance

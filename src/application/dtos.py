@@ -81,3 +81,87 @@ class HealthResponse(BaseModel):
     status: str
     active_sessions: int
     timestamp: Optional[datetime] = None
+
+
+# ===== NEW DTOs FOR SEPARATED ARCHITECTURE =====
+
+class CreateConfigurationRequest(BaseModel):
+    """Request to create a new agent configuration."""
+    name: str = Field(description="Human-readable configuration name")
+    mcp_servers: List[MCPServerConfig] = Field(
+        description="List of MCP server configurations"
+    )
+    system_prompt: Optional[str] = Field(
+        None, description="System prompt override"
+    )
+    model_settings: Optional[Dict[str, Any]] = Field(
+        None, description="Model-specific settings"
+    )
+
+
+class CreateConfigurationResponse(BaseModel):
+    """Response from creating a configuration."""
+    config_id: str
+    name: str
+    message: str
+    mcp_servers_count: int
+    created_at: datetime
+
+
+class StartConversationRequest(BaseModel):
+    """Request to start a new conversation with a configuration."""
+    config_id: str = Field(description="Configuration ID to use")
+    session_id: Optional[str] = Field(
+        None, description="Optional custom session ID"
+    )
+
+
+class StartConversationResponse(BaseModel):
+    """Response from starting a conversation."""
+    session_id: str
+    config_id: str
+    config_name: str
+    message: str
+    created_at: datetime
+
+
+class ExecuteConversationRequest(BaseModel):
+    """Request to execute a message in a conversation."""
+    session_id: str = Field(description="Session ID of the conversation")
+    message: str = Field(description="Message to send to the agent")
+    stream: bool = Field(False, description="Whether to stream the response")
+
+
+class ExecuteConversationResponse(BaseModel):
+    """Response from executing a conversation message."""
+    session_id: str
+    response: str
+    message_count: int
+
+
+class ConfigurationSummary(BaseModel):
+    """Summary information about an agent configuration."""
+    config_id: str
+    name: str
+    mcp_servers_count: int
+    created_at: datetime
+    updated_at: datetime
+
+
+class ListConfigurationsResponse(BaseModel):
+    """Response listing all configurations."""
+    configurations: List[ConfigurationSummary]
+
+
+class ConversationSummary(BaseModel):
+    """Summary information about a conversation."""
+    session_id: str
+    config_id: str
+    created_at: datetime
+    updated_at: datetime
+    message_count: int
+
+
+class ListConversationsResponse(BaseModel):
+    """Response listing conversations."""
+    conversations: List[ConversationSummary]
